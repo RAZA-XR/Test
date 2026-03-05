@@ -1,0 +1,51 @@
+#▬▭▬▭▬▭▬▭[USERAGENT]▬▭▬▭▬▭▬▭#
+def fuck_citar():
+    density = round(random.uniform(2.5, 3.5), 2)
+    fbbv = random.randint(180000000, 350000000)
+    fbav_main = random.randint(250, 420)
+    fbav_build = random.randint(45, 75)
+    fbav_sub = random.randint(80, 180)
+    fbav = f"{fbav_main}.0.0.{fbav_build}.{fbav_sub}"
+    android_ver = random.choice(["8.0", "8.1", "9", "10", "11", "12"])
+    fblc = random.choice(["en_US", "en_GB", "bn_BD"])
+    model = random.choice(["SM-G950F", "SM-G955F", "SM-G960F", "SM-G965F", "SM-G970F", "SM-G973F", "SM-G975F", "SM-G980F", "SM-G985F", "SM-G986B","SM-G988B", "SM-G991B", "SM-G996B", "SM-G998B", "SM-A105F","SM-A205F", "SM-A305F", "SM-A405F", "SM-A505F", "SM-A515F","SM-A525F", "SM-A605F", "SM-A705F", "SM-A715F", "SM-A725F","SM-A908B", "SM-A920F", "SM-M315F", "SM-M515F", "SM-N950F","SM-N960F", "SM-N970F", "SM-N975F", "SM-N980F", "SM-N985F","SM-N986B", "SM-S901B", "SM-S906B", "SM-S908B", "SM-S911B","SM-S916B", "SM-S918B", "SM-S921B", "SM-S926B", "SM-S928B"])
+    build_num = random.randint(190000, 920000)
+    patch_num = random.randint(111, 999)
+    end_part = f'[FBAN/EMA;FBBV/{fbbv};FBAV/{fbav};FBDV/{model};FBLC/{fblc};FBNG/WIFI;FBMNT/NOT_METERED;FBDM/{{density={density}}}]'
+    ua = f'Dalvik/2.1.0 (Linux; U; Android {android_ver}; {model} Build/QP1A.{build_num}.{patch_num}) ' + end_part
+    return ua
+def ____ua____2():
+    brands = {"samsung": ["SM-G950F", "SM-G973F", "SM-G998B", "SM-A525F", "SM-N986B"],"infinix": ["X676B", "X687", "X697", "X6815B", "X689B"],"oppo": ["CPH2487", "CPH2499", "CPH2609", "CPH2465", "CPH2417"],"redmi": ["2201116SI", "M2012K11AI", "21091116UI", "M2102K1AC", "22041219I"],"realme": ["RMX3840", "RMX3760", "RMX3686", "RMX3851", "RMX3630"],"vivo": ["V2025", "V2024", "V2023", "V2022", "V2021"],"xiaomi": ["2210132C", "22081212C", "2201123G", "21091116UI", "M2102K1AC"],"oneplus": ["GM1900", "IN2010", "LE2110", "NE2210", "CPH2411"],"tecno": ["TECNO BC2", "TECNO BD4", "Camon 19", "Spark 9", "Phantom X"],"nokia": ["TA-1000", "TA-1003", "TA-1012", "TA-1021", "TA-1033"],"motorola": ["XT2401-2", "XT2425-2", "XT2453-1", "XT2461-1", "XT1925"],"huawei": ["ANA-AN00", "BRQ-AN00", "EBG-AN00", "JNY-AL10", "LIO-AL00"],"lenovo": ["Lenovo L38012", "Lenovo L70081", "TB-8505X", "TB-J606F"],"asus": ["ASUS_I001D", "ASUS_I003D", "ASUS_I01WD", "ASUS_Z01QD"],"sony": ["SO-01K", "XQ-AT51", "XQ-BC52", "XQ-CQ44", "802SO"],"pixel": ["G9BQD", "GF5KQ", "G1AZG", "G025I", "GB17L"],"blackberry": ["BBB100-1", "BBD100-1", "BBE100-1", "BBF100-1"],"alcatel": ["5001D", "5002D", "5003D", "5004D", "5005D"],"symphony": ["i10", "i50", "V10", "V50", "Z10"],"lava": ["Z1", "Z5", "Iris 1", "Iris 5", "Iris 10"],"walton": ["Primo S5", "Primo S8", "Primo N5", "Primo H5", "Primo X5"],"itel": ["A11", "A15", "S11", "S15", "P11"]}
+    brand = random.choice(list(brands.keys()))
+    model = random.choice(brands[brand])
+    density = random.choice(['2.0', '2.5', '3.0', '3.5', '4.0'])
+    width = random.choice(['720', '1080', '1440'])
+    height = random.choice(['1280', '1920', '2340', '2560'])
+    android = random.choice(['8.0', '9', '10', '11', '12', '13'])
+    fb_locale = random.choice(['en_US', 'en_GB', 'bn_BD', 'hi_IN'])
+    carrier = random.choice(['Grameenphone', 'Robi', 'Banglalink', 'AT&T', 'T-Mobile', 'Wi-Fi'])
+    fbbv = random.randint(150000000, 450000000)
+    fbop = random.choice(['1', '0'])
+    fb_versions = [f'[FBAN/FB4A;FBAV/{random.randint(120, 250)}.0.0.{random.randint(1111, 9999)};FBBV/{fbbv};FBDM/{{density={density},width={width},height={height}}};FBLC/{fb_locale};FBRV/{random.randint(256855919, 356855919)};FBCR/{carrier};FBMF/{brand.upper()};FBBD/{brand.upper()};FBPN/com.facebook.katana;FBDV/{model};FBSV/{android};FBOP/{fbop};FBCA/armeabi-v7a;]',f'[FBAN/Orca-Android;FBAV/{random.randint(130, 250)}.0.0.{random.randint(4000, 5000)};FBBV/{fbbv};FBPN/com.facebook.orca;FBLC/{fb_locale};FBRV/{random.randint(348143439, 448143439)};FBCR/{carrier};FBMF/{brand.upper()};FBBD/{brand.upper()};FBDV/{model};FBSV/{android};FBCA/armeabi-v7a;FBDM/{{density={density},width={width},height={height}}};FB_FW/1;]']
+    ua = random.choice(fb_versions)
+    return ua
+def fuck_mc():
+    chrome = f"{random.choice(['122','124','126','128','130'])}.{random.randrange(0,9)}.{random.randrange(5111,6999)}.{random.randrange(60,299)}"
+    firefox = f"{random.choice(['115','116','117','118','119','120','121','122','123','124','125','126','127','128','129','130','131','132','133','134','135'])}.0"
+    safari = f"{random.choice(['15','16','17','18'])}.{random.choice(['0','1','2','3','4'])}"
+    ubuntu = random.choice(['Ubuntu ','Ubuntu/','Ubuntu; ','Ubuntu-'])
+    linucx = random.choice(['GoogleApp','YandexSearch','LinuxApp'])
+    arm = str(random.randint(32,64))
+    tahun = random.choice(['2009','2010','2011','2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'])
+    angka = random.choice(['01','02','03','04','05','06','07','08','09','10'])
+    return random.choice([f"Mozilla/5.0 (Windows NT {random.choice(['10.0','11.0'])}; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.{random.randrange(1,99)} Edg/{random.choice(['122','123','124','125'])}.{random.randrange(0,9)}.{random.randrange(1000,9999)}",f"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_{random.choice(['15','14','13'])}_{random.randint(1,7)}) AppleWebKit/605.1.{random.randint(10,15)} (KHTML, like Gecko) Version/{safari} Safari/605.1.{random.randint(10,15)}",f"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36",f"Opera/9.80 (Windows NT {random.choice(['6.1','6.2','10.0'])}; {random.choice(['WOW64','U','en'])}) Presto/2.12.{random.randint(300,400)} Version/{random.choice(['12.18','11.10','12.16'])}",f"Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",f"Mozilla/5.0 (X11; {ubuntu}{random.randrange(10,22)}.{angka}; Linux {random.choice(['x86_64','i686'])}) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(10,20)}.{random.randint(20,40)}.{random.randint(20,70)}.{random.randint(20,29)}.arm{arm}",f"Mozilla/5.0 (Linux; {ubuntu}{random.randrange(10,22)}.{angka}; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(10,20)}.{random.randint(20,40)}.{random.randint(20,70)}.{random.randint(20,29)}.arm{arm}",f"Mozilla/5.0 (Linux; {ubuntu}{random.randrange(10,22)}.{angka}; Android {random.randint(9,14)}; moto g stylus 5G ({tahun})) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(10,20)}.{random.randint(20,40)}.{random.randint(20,70)}.{random.randint(20,29)}.arm{arm}"])
+def best_ua():
+    model = random.choice(["Pixel 9 Pro XL", "Pixel 9 Pro", "Pixel 9", "Pixel 8 Pro", "Pixel 8","SM-S928B", "SM-S926B", "SM-S918B", "SM-S911B", "SM-F946B","iPhone16,2", "iPhone16,1", "iPhone15,3", "iPhone15,2","CPH2499", "CPH2609", "CPH2487","Xiaomi 14 Ultra", "Xiaomi 14", "Redmi Note 13 Pro+ 5G"])
+    android = random.choice(["14", "15"])
+    fbav = f"{random.randint(500, 550)}.0.0.{random.randint(80, 99)}.{random.randint(300, 399)}"
+    fbbv = random.randint(450000000, 520000000)
+    fbop = random.randint(35, 50)
+    density = random.choice(["3.5", "4.0", "4.5"])
+    fblc = random.choice(['en_US', 'en_GB'])
+    ua = (f"[FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};FBDM/{{density={density},width=1440,height=3120}};"f"FBLC/{fblc};FBRV/0;FBCR/Google Fi;FBMF/Google;FBBD/Google;FBPN/com.facebook.katana;"f"FBDV/{model};FBSV/{android};FBOP/{fbop};FBCA/arm64-v8a:armeabi-v7a;]")
+    return ua

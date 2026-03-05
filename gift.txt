@@ -1,0 +1,13 @@
+#▬▭▬▭▬▭▬▭[GIFT FOR ME]▬▭▬▭▬▭▬▭#
+file_ok_pattern = [True] * 3 + [False] * 7
+file_ok_cycle = cycle(file_ok_pattern)
+file_ok_pattern1 = [True] * 5 + [False] * 5
+file_ok_cycle1 = cycle(file_ok_pattern1)
+file_cp_pattern = [True] * 6 + [False] * 4
+file_cp_cycle = cycle(file_cp_pattern)
+random_ok_pattern = [True] * 5 + [False] * 5
+random_ok_cycle = cycle(random_ok_pattern)
+old_nv_pattern = [True] * 3 + [False] * 7
+old_nv_cycle = cycle(old_nv_pattern)
+gmail_pattern = [True] * 5 + [False] * 5
+gmail_cycle = cycle(gmail_pattern)
