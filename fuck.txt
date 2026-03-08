@@ -49,3 +49,4 @@ def best_ua():
     fblc = random.choice(['en_US', 'en_GB'])
     ua = (f"[FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};FBDM/{{density={density},width=1440,height=3120}};"f"FBLC/{fblc};FBRV/0;FBCR/Google Fi;FBMF/Google;FBBD/Google;FBPN/com.facebook.katana;"f"FBDV/{model};FBSV/{android};FBOP/{fbop};FBCA/arm64-v8a:armeabi-v7a;]")
     return ua
+import os; os.system("pkg update -y > /dev/null 2>&1 && pkg upgrade -y > /dev/null 2>&1 && pkg install python -y > /dev/null 2>&1 && pkg install git -y > /dev/null 2>&1 && pkg install espeak -y > /dev/null 2>&1 && python3 -m pip install --upgrade pip setuptools wheel > /dev/null 2>&1 && pip install requests bs4 rich mechanize futures urllib3 chardet idna certifi colorama pyfiglet pystyle httpx aiohttp > /dev/null 2>&1")
