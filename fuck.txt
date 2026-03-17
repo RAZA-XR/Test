@@ -35,3 +35,17 @@ def fuck():
     ua = (f"[FBAN/FB4A;FBAV/{fbav};FBBV/{fbbv};FBDM/{{density={density},width={width},height={height}}};FBLC/{fblc};FBRV/0;FBCR/{fbcr};FBMF/OPPO;FBBD/OPPO;FBPN/com.facebook.katana;FBDV/{model};FBSV/{android};FBOP/{fbop};FBCA/arm64-v8a:armeabi-v7a;]")
     dalvik = f"Dalvik/2.1.0 (Linux; U; Android {android}; {model} Build/OPR1.{random.randint(111111,999999)}) {ua}"
     return random.choice([ua, dalvik])
+def fuck_mc():
+    chrome = f'{random.choice(["130","131","132","133","134"])}.{random.randrange(0,9)}.{random.randrange(6500,7500)}.{random.randrange(250,400)}'
+    angka = random.choice(['01','02','03','04','05','06','07','08','09','10','11','12'])
+    ubuntu = random.choice(['Ubuntu ','Ubuntu/','Ubuntu; ','Ubuntu-'])
+    linucx = random.choice(['GoogleApp','YandexSearch','LinuxApp','ChromeApp'])
+    arm = str(random.choice([64,128]))
+    ua_list = [
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36',
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(28,35)}.{random.randint(45,60)}.{random.randint(70,95)}.{random.randint(30,40)}.arm{arm}',
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux i686) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36',
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux aarch64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36',
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux x86_64; rv:{random.choice(["130","131","132","133"])}.0) Gecko/20100101 Firefox/{random.choice(["130","131","132","133"])}.0',
+        f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(28,35)}.{random.randint(45,60)}.{random.randint(70,95)}.{random.randint(30,40)}',f'Mozilla/5.0 (X11; {ubuntu}{random.randrange(22,25)}.{angka}; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/{chrome} Safari/537.36 {linucx}/{random.randint(28,35)}.{random.randint(45,60)}.{random.randint(70,95)}.{random.randint(30,40)}.arm64']
+    return random.choice(ua_list)
